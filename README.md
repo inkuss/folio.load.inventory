@@ -1,5 +1,8 @@
 # folio.load.inventory
-Scripts and tools to load inventory data (instances, holdings, items, instanceRelationships) in format FOLIO-Json into Folio
+Scripts and tools to load inventory data (instances, holdings, items, instanceRelationships) in format FOLIO-Json into Folio.
+
+Example to load a complete sample sequence of connected instances, holdings and items into Folio.
+- with instance relationships (parent and child relations)
 
 ## Sample inventory data
 The sample inventory data in sample_inventory/ will create the following inventory, when loaded to Folio:
