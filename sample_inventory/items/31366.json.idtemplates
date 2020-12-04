@@ -8,7 +8,7 @@
    "barcode" : "00031366",
    "materialTypeId" : "?MaterialType_text?",
    "itemIdentifier" : "31366",
-   "permanentLocationId" : "?Location_F?",
+   "permanentLocationId" : "?Location_KU/CC/DI/M?",
    "itemLevelCallNumberTypeId" : "?CallNumberType_Shelving_control_number?",
    "status" : {
       "name" : "Available"
