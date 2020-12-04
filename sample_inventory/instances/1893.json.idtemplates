@@ -1,0 +1,40 @@
+{
+   "notes" : [
+      {
+         "note" : "Schriftenkennzeichen",
+         "instanceNoteTypeId" : ?InstanceNoteType_General_note?",
+         "staffOnly" : ""
+      }
+   ],
+   "@context" : "http://localhost:9130/inventory/instances/context",
+   "subjects" : [
+      "Komponistin",
+      "Thieme, Kerstin",
+      "Schmidt, Mia",
+      "Shlonsky, Verdina",
+      "Kuyper, Elisabeth",
+      "Smyth, Ethel",
+      "Wen-Hui, Tu",
+      "Fontyn, Jacqueline"
+   ],
+   "id" : "503b0af1-d402-56b2-b93c-29af42949db6",
+   "instanceTypeId" : "?InstanceType_txt?",
+   "title" : "Kerstin Thieme, Ethel Smyth, Mia Schmidt, Verdina Shlonsky, Elisabeth Kuyper, Tu Wen-Hui, Jacqueline Fontyn : iVolume 2 ; ",
+   "hrid" : "1893",
+   "modeOfIssuanceId" : "?IssuanceMode_serial?",
+   "physicalDescriptions" : [
+      "Illus.: 120",
+      "Umfang: 64 S."
+   ],
+   "source" : "FOLIO",
+   "identifiers" : [
+      {
+         "identifierTypeId" : "?IdentifierType_Other_standard_identifier?",
+         "value" : "1893"
+      },
+      {
+         "identifierTypeId" : "?IdentifierType_ISBN?",
+         "value" : "3-9801326-5-X"
+      }
+   ]
+}

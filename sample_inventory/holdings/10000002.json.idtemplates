@@ -1,0 +1,13 @@
+{
+   "instanceId" : "cbcfa7a1-2547-57a0-bb52-45b4de38e466",
+   "permanentLocationId" : "?Location_KU/CC/DI/2?",
+   "id" : "bede57e0-ef63-571a-a6e6-ce48f1240368",
+   "hrid" : 10000002,
+   "holdingsStatements" : [
+      {
+         "note" : "MusHeh 71",
+         "staffOnly" : "1",
+         "statement" : "Bestandsangabe=Freihandsignatur"
+      }
+   ]
+}

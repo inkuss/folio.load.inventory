@@ -1,0 +1,15 @@
+{
+   "id" : "f60e8aad-972e-5429-a22f-6242f7ca00c6",
+   "callNumber" : "MusZg",
+   "hrid" : 10000003,
+   "holdingsStatements" : [
+      {
+         "staffOnly" : "1",
+         "statement" : "Bestandsangabe=Freihandsignatur",
+         "note" : "MusHeh 71"
+      }
+   ],
+   "permanentLocationId" : "?Location_KU/CC/DI/M?",
+   "instanceId" : "503b0af1-d402-56b2-b93c-29af42949db6",
+   "callNumberTypeId" : "?CallNumberType_Other_scheme?"
+}

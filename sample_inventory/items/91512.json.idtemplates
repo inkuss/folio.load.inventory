@@ -1,0 +1,22 @@
+{
+   "notes" : [
+      {
+         "note" : "Lambrecht / Noten- u. Schallarch.",
+         "itemNoteTypeId" : "?ItemNoteType_Provenance?",
+         "staffOnly" : "1"
+      }
+   ],
+   "itemIdentifier" : "91512",
+   "materialTypeId" : "?MaterialType_text?",
+   "barcode" : "00091512",
+   "id" : "a76eab26-48c9-5b47-b4e1-a5e003cdbabf",
+   "hrid" : "91512",
+   "permanentLocationId" : "?Location_KU/CC/DI/2?",
+   "status" : {
+      "name" : "Available"
+   },
+   "accessionNumber" : "98/4626",
+   "permanentLoanTypeId" : "?LoanType_Can_circulate?",
+   "copyNumber" : "003",
+   "holdingsRecordId" : "bede57e0-ef63-571a-a6e6-ce48f1240368"
+}

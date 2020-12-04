@@ -1,0 +1,17 @@
+{
+   "permanentLoanTypeId" : "?LoanType_Can_circulate?",
+   "holdingsRecordId" : "f60e8aad-972e-5429-a22f-6242f7ca00c6",
+   "copyNumber" : "003",
+   "itemLevelCallNumber" : "MusZg",
+   "barcode" : "00091514",
+   "materialTypeId" : "?MaterialType_text?",
+   "itemIdentifier" : "91514",
+   "permanentLocationId" : "?Location_KU/CC/DI/M?",
+   "status" : {
+      "name" : "Available"
+   },
+   "itemLevelCallNumberTypeId" : "?CallNumberType_Other_scheme?",
+   "accessionNumber" : "98/4625",
+   "id" : "8b383321-5282-5f0c-86e7-8493f5b2c2e2",
+   "hrid" : "91514"
+}

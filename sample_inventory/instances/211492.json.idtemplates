@@ -1,0 +1,44 @@
+{
+   "identifiers" : [
+      {
+         "value" : "211492",
+         "identifierTypeId" : "?IdentifierType_Other_standard_identifier?",
+      },
+      {
+         "identifierTypeId" : "?IdentifierType_ISBN?",
+         "value" : "3-455-29506-1"
+      }
+   ],
+   "physicalDescriptions" : [
+      "Illus.: 800",
+      "Umfang: 130 S."
+   ],
+   "source" : "FOLIO",
+   "modeOfIssuanceId" : "?IssuanceMode_single_unit?",
+   "publication" : [
+      {
+         "place" : "Hamburg",
+         "publisher" : "Hoffmann und Campe",
+         "role" : "Herausgeber",
+         "dateOfPublication" : "1995"
+      }
+   ],
+   "hrid" : "211492",
+   "title" : "Tunesien :  Ein Land in der Sonne; ",
+   "id" : "d7acfcb7-58e0-587e-9a92-fd6b10114226",
+   "instanceTypeId" : "?InstanceType_txt?",
+   "subjects" : [
+      "Tunesien"
+   ],
+   "@context" : "http://localhost:9130/inventory/instances/context",
+   "natureOfContentTermIds" : [
+      "?NatureOfContentTerm_travel_report?"
+   ],
+   "notes" : [
+      {
+         "note" : "Schriftenkennzeichen",
+         "instanceNoteTypeId" : "?InstanceNoteType_General_note?",
+         "staffOnly" : ""
+      }
+   ]
+}

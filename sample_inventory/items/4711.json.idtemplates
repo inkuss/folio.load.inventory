@@ -1,0 +1,19 @@
+{
+   "itemLevelCallNumberPrefix" : "2/",
+   "permanentLoanTypeId" : "?LoanType_Can_circulate?",
+   "itemLevelCallNumberSuffix" : "-48,6-",
+   "copyNumber" : "001",
+   "itemLevelCallNumber" : "29300",
+   "holdingsRecordId" : "b0b0474c-3187-57c0-bda7-c0ad4d8b3e24",
+   "itemIdentifier" : "4711",
+   "materialTypeId" : "?MaterialType_text?",
+   "barcode" : "00004711",
+   "hrid" : "4711",
+   "id" : "9ec4aea2-b4f7-5ab0-bf54-87a66f135bbd",
+   "accessionNumber" : "96/2783",
+   "itemLevelCallNumberTypeId" : "?CallNumberType_Shelving_control_number?",
+   "status" : {
+      "name" : "Available"
+   },
+   "permanentLocationId" : "?Location_KU/CC/DI/A?"
+}

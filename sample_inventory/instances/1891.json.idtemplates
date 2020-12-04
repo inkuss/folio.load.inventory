@@ -1,0 +1,45 @@
+{
+   "instanceTypeId" : "?InstanceType_txt?",
+   "id" : "cbcfa7a1-2547-57a0-bb52-45b4de38e466",
+   "hrid" : "1891",
+   "title" : "Barbara Heller, Aleida Montijn, Alice Samter, Eva Schorr, Brunhilde Sonntag, Erna Woll, Ruth Zechlin : Volume 1 ; ",
+   "@context" : "http://localhost:9130/inventory/instances/context",
+   "subjects" : [
+      "Heller, Barbara",
+      "Montijn, Aleida",
+      "Samter, Alice",
+      "Schorr, Eva",
+      "Sonntag, Brunhilde",
+      "Woll, Erna",
+      "Zechlin, Ruth",
+      "Komponistin"
+   ],
+   "notes" : [
+      {
+         "note" : "Schriftenkennzeichen",
+         "staffOnly" : "",
+         "instanceNoteTypeId" : "?InstanceNoteType_General_note?",
+      },
+      {
+         "staffOnly" : "",
+         "instanceNoteTypeId" : "?InstanceNoteType_Language_note?",
+         "note" : "German"
+      }
+   ],
+   "source" : "FOLIO",
+   "physicalDescriptions" : [
+      "Illus.: 120",
+      "Umfang: 64 S."
+   ],
+   "identifiers" : [
+      {
+         "identifierTypeId" : "?IdentifierType_Other_standard_identifier?",
+         "value" : "1891"
+      },
+      {
+         "identifierTypeId" : "?IdentifierType_ISBN?",
+         "value" : "3-9801326-3-3"
+      }
+   ],
+   "modeOfIssuanceId" : "?IssuanceMode_serial?"
+}
