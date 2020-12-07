@@ -43,3 +43,16 @@ perl createIdLabels.pl -t mytenant -u myokapiurl
 
 `scripts_out/IdLabelsMap.csv` contains a sample mapping file for Goldenrod standard reference data. It doesn't contain any custom reference data.
 
+## Replace ID Labels in Sample Data
+To replace the ID labels in the sample data with real UUIDs, based on the mapping table `scripts_out/IdLabelsMap.csv` do
+```
+cd scripts/
+perl replaceIdLabels.pl -d ../sample_inventory
+```
+This will create the files `sample_inventory/*/*.json` beside the corresponding files `sample_inventory/*/*.idlabels` in the sample data directory. The files `*.json` do not contain ID labels anymore, but plain UUIDs, and might be loaded into a Folio instance as they are.
+
+Read the help page of the script to learn how to use it to convert your own data:
+```
+cd scripts/
+perl replaceIdLabels.pl -h
+```
