@@ -25,3 +25,16 @@ The sample inventory data in sample_inventory/ will create the following invento
 - 1 single unit, hrid 211492 (uuid d7ac...) with 1 holding:
   - holding 10000004 in location: annex, with 1 item:
     - item hrid 4711
+    
+## Creating ID Labels; Mapping Table
+The sample inventory data contains labels for UUIDs instead of the plain UUIDs. This is true as far as the Folio reference data (such as identifier types, status definitions and other system relevant identifiers) are concerned.  
+You can create the labels which are being used in your Folio instance by running the script `createIdLabels.pl`. This script will read the reference data from your Folio instance and create one line in a mapping table for each piece of reference data. This mapping table is being written to the file `scripts_out/IdLabelsMap.csv` by default:
+```cd scripts/
+perl createIdLabels.pl -h
+```
+Create a file `login.json` with credentials to connect to your Folio tenant as described in the help page of the script.  
+Then execute
+``` perl createIdLabels.pl -t mytenant -u myokapiurl
+```
+
+
