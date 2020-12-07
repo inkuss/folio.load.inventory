@@ -41,4 +41,5 @@ Then execute
 perl createIdLabels.pl -t mytenant -u myokapiurl
 ```
 
+`scripts_out/IdLabelsMap.csv` contains a sample mapping file for Goldenrod standard reference data. It doesn't contain any custom reference data.
 
