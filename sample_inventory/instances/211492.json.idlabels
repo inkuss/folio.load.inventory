@@ -2,7 +2,7 @@
    "identifiers" : [
       {
          "value" : "211492",
-         "identifierTypeId" : "?IdentifierType_Other_standard_identifier?",
+         "identifierTypeId" : "?IdentifierType_Other_standard_identifier?"
       },
       {
          "identifierTypeId" : "?IdentifierType_ISBN?",

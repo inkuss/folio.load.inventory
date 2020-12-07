@@ -2,7 +2,7 @@
    "notes" : [
       {
          "note" : "Schriftenkennzeichen",
-         "instanceNoteTypeId" : ?InstanceNoteType_General_note?",
+         "instanceNoteTypeId" : "?InstanceNoteType_General_note?",
          "staffOnly" : ""
       }
    ],
