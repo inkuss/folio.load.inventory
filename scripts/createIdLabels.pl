@@ -1,11 +1,11 @@
 #!/usr/bin/perl -w
-# Purpose of script: Creates a mapping table @Label-ID-Name@ ==> actual uuid in your Folio instance
+# Purpose of script: Creates a mapping table @ID-Label@ ==> actual uuid in your Folio instance
 # Author: Ingolf Kuss, HBZ-NRW
 # Creation date: Dec. 07th, 2020
-# Output: A mapping table file ../scripts_out/createMapIds.csv
+# Output: A mapping table file ../scripts_out/IdLabelsMap.csv
 # Please provide an authentication file login.json with the following content:
 #     { "tenant" : "$tenant", "username" : "$username", "password" : "$password" }
-# For Help call:  perl createMapIds.pl -h
+# For Help call:  perl createIdLabels.pl -h
 
 use Getopt::Std;
 use File::Basename;
@@ -28,8 +28,7 @@ my $log = *STDOUT;
 my $logfile = $script;
 $logfile =~ s/\.pl$/.log/;
 my $scripts_out = "../scripts_out";
-my $mapping_file=$scripts_out."/".$script;
-$mapping_file =~ s/\.pl$/.csv/;
+my $mapping_file=$scripts_out."/IdLabelsMap.csv";
 my $okapi_url = "api.localhost/okapi";
 my $tenant = "diku";
 my $login_file = "login.json";
@@ -170,8 +169,6 @@ sub usage {
               Defaults to $scripts_out
        -t :   Folio Tenant. Defaults to $tenant
        -u :   Your Okapi URL. Defaults to $okapi_url
-
-  Sample Call :  perl ersetzeIds.pl -s -v /usr/folio/folio-mig/sample_input > ersetzeIds.log
 END
   exit 0;
   }
