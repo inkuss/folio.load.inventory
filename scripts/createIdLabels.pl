@@ -33,30 +33,31 @@ my $okapi_url = "api.localhost/okapi";
 my $tenant = "diku";
 my $login_file = "login.json";
 
-# Folio table names which contain type definitions, status definitions or other definitions of system identifiers (UUIDs)
-my @tableNames = ( "AlternativeTitleTypes"
-	# , "CallNumberTypes"
-	# , "ClassificationTypes"
-	#  , "ContributorNameTypes"
-	# , "ContributorTypes"
-	# , "ElectronicAccessRelationships"
-	# , "IdentifierTypes"
-	# , "InstanceFormats"
-	# , "InstanceNoteTypes"
-	# , "InstanceRelationshipTypes"
-	# , "InstanceStatuses"
-	# , "InstanceTypes"
-	# , "ItemDamageStatuses"
-	# , "ItemNoteTypes"
-	# , "LoanTypes"
-	# , "Locations"
-	# , "MaterialTypes"
-	# , "IssuanceModes"
-	# , "NatureOfContentTerms"
-	# , "ServicePoints"
-                 ## , "ShelfLocations"
-		 # , "StatisticalCodes"
-                 );
+# Folio tables which contain type definitions, status definitions or other definitions of system identifiers (UUIDs)
+my @tables = ( 
+    { name => "AlternativeTitleTypes", endpoint => "alternative-title-types" },
+    { name => "CallNumberTypes", endpoint => "call-number-types" },
+    { name => "ClassificationTypes", endpoint => "classification-types" },
+    { name => "ContributorNameTypes", endpoint => "contributor-name-types" },
+    { name => "ContributorTypes", endpoint => "contributor-types" },
+    { name => "ElectronicAccessRelationships", endpoint => "electronic-access-relationships" },
+    { name => "IdentifierTypes", endpoint => "identifier-types" },
+    { name => "InstanceFormats", endpoint => "instance-formats" },
+    { name => "InstanceNoteTypes", endpoint => "instance-note-types" },
+    { name => "InstanceRelationshipTypes", endpoint => "instance-relationship-types" },
+    { name => "InstanceStatuses", endpoint => "instance-statuses" },
+    { name => "InstanceTypes", endpoint => "instance-types" },
+    { name => "ItemDamageStatuses", endpoint => "item-damaged-statuses" },
+    { name => "ItemNoteTypes", endpoint => "item-note-types" },
+    { name => "LoanTypes", endpoint => "loan-types" },
+    { name => "Locations", endpoint => "locations" },
+    { name => "MaterialTypes", endpoint => "material-types" },
+    { name => "IssuanceModes", endpoint => "modes-of-issuance" },
+    { name => "NatureOfContentTerms", endpoint => "nature-of-content-terms" },
+    { name => "ServicePoints", endpoint => "service-points" },
+    # { name =>  "ShelfLocations", endpoint => "shelf-locations" },
+    { name =>  "StatisticalCodes", endpoint => "statistical-codes" }
+  );
 
 # **********************************
 # Evaluate command line options
@@ -100,12 +101,13 @@ printf $log "Scripts output directory: %s\n", $scripts_out;
 # ****************************
 # Subroutines (Perl Functions)
 # ****************************
-sub process_tableName {
+sub process_table {
   # Processes one Folio table
   my $tableName = shift;
+  my $endpoint = shift;
   printf $log "Table name: %s\n", $tableName;
   # Read contents of the table and write it into a file (format: JSON)
-  system("sh get".$tableName.".sh -u $okapi_url -t $tenant -l $login_file > $scripts_out/get${tableName}.json");
+  system("sh getIdsNameCodeFromEndpoint.sh -u $okapi_url -t $tenant -l $login_file $endpoint > $scripts_out/get${tableName}.json");
   # Read the json file which has just been created
   my $perl_json_object = json_file_to_perl("$scripts_out/get${tableName}.json");
   my $content="";
@@ -141,8 +143,8 @@ sub process_tableName {
 # Begin of Main Processing
 # ************************
 open CSV, ">$mapping_file";
-for my $tableName ( @tableNames ) {
-  &process_tableName( $tableName );
+for my $table ( @tables ) {
+  &process_table( $table->{name}, $table->{endpoint} );
   }
 close CSV;
 

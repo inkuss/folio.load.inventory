@@ -1,19 +1,23 @@
 #!/bin/bash
-# Read Alternative Title Types
+# Read IDs with name and code from a Folio endpoint.
+# Code is not available in every endpoint. Might read source and other fields as well.
 # Author: I. Kuss, HBZ-NRW
 # Creation date: Dec. 7th, 2020
 # Call script with option -h for Help
 
 # Script parameters with default values
+script=$0
 okapi_url="api.localhost/okapi"
-tenant="diku";
+tenant="diku"
 login_file="login.json"
 silent_off=0
 verbose=0
+endpoint=""
 
 usage() {
   cat <<EOF
-  Reads Alternative Title Types from your folio instance.
+  Reads IDs with name and code from a Folio endpoint.
+  Usage: $script <Folio-Endpoint (URL fragment after Okapi's URL)>
 
   Command line options:
    - h          Print this help page
@@ -24,6 +28,8 @@ usage() {
    - t [tenant] TENANT, Default to: $tenant
    - u [url]    Okapi URL, URL of your Okapi instance. Defaults to: $okapi_url
    - v          verbose. Defaults to: $verbose
+
+  Sample Call: $script -t mytenant -u myokapiurl contributor-types
 EOF
   exit 0
   }
@@ -50,6 +56,12 @@ shift $((OPTIND-1))
 [ "${1:-}" = "--" ] && shift
 
 # Begin Main Processing
+if [ -z "$1" ]; then
+  echo "  ERROR: Please provide one parameter: Endpoint"
+  usage
+fi
+endpoint=$1
+
 curlopts=""
 if [ $silent_off != 1 ]; then
   curlopts="$curlopts -s"
@@ -59,7 +71,7 @@ if [ $verbose == 1 ]; then
 fi
 
 TOKEN=$( curl -s -S -D - -H "X-Okapi-Tenant: $tenant" -H "Content-type: application/json" -H "Accept: application/json" -d @$login_file $okapi_url/authn/login | grep -i "^x-okapi-token: " )
-curl $curlopts -S -X GET -H "$TOKEN" -H "X-Okapi-Tenant: $tenant" -H "Content-type: application/json; charset=utf-8" -H "Accept: application/json" $okapi_url/alternative-title-types?limit=1000
+curl $curlopts -S -X GET -H "$TOKEN" -H "X-Okapi-Tenant: $tenant" -H "Content-type: application/json; charset=utf-8" -H "Accept: application/json" $okapi_url/$endpoint?limit=1000
 echo
 
 exit 0
