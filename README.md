@@ -1,7 +1,7 @@
 # folio.load.inventory
-Scripts and tools to load inventory data (instances, holdings, items, instanceRelationships) in format FOLIO-Json into Folio.
+Scripts and tools to load inventory data (instances, holdings, items, instanceRelationships) in format FOLIO-Json into Folio Inventory. For Folio Open Source Library System.
 
-Example to load a complete sample sequence of connected instances, holdings and items into Folio.
+Example to load a complete sample sequence of connected instances, holdings and items into Folio Inventory.
 - with instance relationships (parent and child relations)
 
 ## Sample inventory data
@@ -55,4 +55,29 @@ Read the help page of the script to learn how to use it to convert your own data
 ```
 cd scripts/
 perl replaceIdLabels.pl -h
+```
+
+## Load a complete sample sequence of connected instances, holdings and items into Folio Inventory
+
+- With instance relationships (multipart monograph with serials)
+- Using the sample data in sample_inventory/ (in format *.json)
+
+```
+cd scripts/
+./createInstances.sh -u myokapiurl -t mytenant
+./createInstanceRelationships.sh -u myokapiurl -t mytenant
+./createHoldings.sh -u myokapiurl -t mytenant
+./createItems.sh -u myokapiurl -t mytenant
+```
+
+## Delete the complete sample sequence in Folio Inventory
+
+This will work as long as no connected loans, reservations etc. have been made on the inventory.  
+Deletion has to take place in the oppsite order of creation, like this:  
+
+```
+./deleteItems.sh -u myokapiurl -t mytenant
+./deleteHoldings.sh -u myokapiurl -t mytenant
+./deleteInstanceRelationships.sh -u myokapiurl -t mytenant
+./deleteInstances.sh -u myokapiurl -t mytenant
 ```
