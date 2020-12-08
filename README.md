@@ -70,7 +70,7 @@ cd scripts/
 ./createItems.sh -u myokapiurl -t mytenant
 ```
 
-## Delete the complete sample sequence in Folio Inventory
+## Delete the complete sample sequence in Folio Inventory again
 
 This will work as long as no connected loans, reservations etc. have been made on the inventory.  
 Deletion has to take place in the oppsite order of creation, like this:  
