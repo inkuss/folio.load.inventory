@@ -48,6 +48,7 @@ To replace the ID labels in the sample data with real UUIDs, based on the mappin
 ```
 cd scripts/
 perl replaceIdLabels.pl -d ../sample_inventory
+grep ERROR replaceIdLabels.log | sort -u
 ```
 This will create the files `sample_inventory/*/*.json` beside the corresponding files `sample_inventory/*/*.idlabels` in the sample data directory. The files `*.json` do not contain ID labels anymore, but instead they contain plain UUIDs. The files `*.json` might be loaded into a Folio instance as they are.
 
@@ -68,6 +69,7 @@ cd scripts/
 ./createInstanceRelationships.sh -u myokapiurl -t mytenant
 ./createHoldings.sh -u myokapiurl -t mytenant
 ./createItems.sh -u myokapiurl -t mytenant
+grep error createItems.log
 ```
 
 ## Delete the complete sample sequence in Folio Inventory again
